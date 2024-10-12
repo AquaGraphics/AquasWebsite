@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="icon.ico">
     <title>Designs By Aqua</title>
     <link rel="stylesheet" href="stylecontact.css">
 </head>
 
 <header class="header">
-    <a href="#" class="logo">Aqua</a>
+    <a href="index.html" class="logo">Aqua</a>
 
     <nav class="navbar">
         <a href="index.html" class="active">Home</a> 
-        <a href="#">About</a> 
-        <a href="#">Services</a> 
-        <a href="#">Portfolio</a> 
-        <a href="#">Contact</a> 
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a> 
+        <a href="portfolio.html">Portfolio</a> 
+        <a href="contact.html">Contact</a> 
     </nav>
 </header>
-
 <body>
     <div class="container">
-        <form>
-            <h1>Contact Us</h1>
-            <input type="text" id="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" placeholder="Last Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="mobile" placeholder="Mobile" required>
-            <h4>Type your Message Here...</h4>
-            <textarea required></textarea>
+        <form action="http://127.0.0.1:5500/confirmation.html">
+            <h1>Contact Me</h1>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/confirmation.html">
+            <input type="text"  autocomplete="off" id="firstName" placeholder="First Name" required>
+            <input type="text" autocomplete="off" formnovalidate id="lastName" placeholder="Last Name" required>
+            <input type="email" autocomplete="off" formnovalidate id="email" placeholder="Email" required>
+            <input type="text" autocomplete="off" formnovalidate id="mobile" placeholder="Mobile" required>
             <input type="submit" value="Send" id="button">
         </form>
     </div>

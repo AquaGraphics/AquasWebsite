@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    color: #ededed;
+}
 
 .header {
     position: fixed;
@@ -54,20 +59,149 @@
     color: #ededed;
 }
 
-input[type=text] {
-    box-sizing: border-box;
-    border: none;
-    background-color: #3CBC8D;
-    color: white;
+.home {
+    height: 100vh;
+    background: url('home.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
+.home-content {
+    max-width: 600px;
+}
 
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
 
-input[type=email] {
-    box-sizing: border-box;
-    border: none;
-    background-color: #3CBC8D;
-    color: white;
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #ededed;
+    border: 2px solid #ededed;
+    border-radius:  8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #ededed;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ededed;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* KEYFRAME ANIMATION*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
 }
 
 .container{
@@ -81,7 +215,7 @@ input[type=email] {
 
 .container form{
     width: 670px;
-    height: 400px;
+    height: 150px;
     display: flex;
     justify-content: center;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -124,9 +258,11 @@ input[type=email] {
 .container form h4{
     color: #fff;
     font-weight: 300;
-    width: 600px;
-    margin-top: 20px;
+    width: 1000px;
+    margin-top: 10px;
 }
+
+
 
 .container form textarea{
     background: none;
@@ -151,21 +287,6 @@ textarea::-webkit-scrollbar-thumb{
     background-color: rgba(194, 194, 194, 0,713);
 }
 
-.container form #button{
-    border: none;
-    background: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #333;
-    width: 100px;
-    padding: 0;
-    margin-right: 500px;
-    margin-bottom: 30px;
-    transition: 0.3s;
-}
-
 .container form #button:hover{
     opacity: 0.7;
 }
@@ -176,3 +297,13 @@ textarea::-webkit-scrollbar-thumb{
         width: 0;
     }
 }
+
+.container form h2 {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateX(-5%) translateY(-10%);
+    text-align: center;
+    font-weight: 200;
+}
+

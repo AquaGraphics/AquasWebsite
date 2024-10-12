@@ -204,5 +204,11 @@ body {
     }
 }
 
+.img-logo {
+    width: 300px;
+    right: 250px;
+    position: absolute;
+}
+
 
 
